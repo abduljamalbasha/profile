@@ -1,0 +1,195 @@
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* cursor style */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  height: 100vh;
+  background: #000115;
+  cursor: none;
+}
+
+.main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h1{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 65px;
+}
+
+.cursor{
+  z-index: 999;
+  position: fixed;
+  background: #2696E8;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 20px #2696E8,
+              0 0 60px #2696E8,
+              0 0 100px #2696E8;
+  animation: colors 5s infinite;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+@keyframes colors{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+.cursor:before{
+  content: '';
+  position: absolute;
+  background: #2696E8;
+  width: 30px;
+  height: 30px;
+  opacity: 0.2;
+  transform: translate(-25%, -25%);
+  border-radius: 50%;
+}
+
+
+/* custom css */
+.top-tags {
+    bottom: auto;
+    top: 2rem;
+}
+.tags {
+    color: #515152;
+    position: absolute;
+    bottom: 0;
+    left: 4rem;
+    font-style: italic;
+    font-size: 1.8rem;
+}
+
+
+/* progress bar color */
+.progress {
+  padding: 4px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar {
+  height: 4px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar-green-75  {
+  width: 85%;
+  background-color: #2bc4af;
+  animation: progressAnimation 6s;
+}
+
+.progress-moved .progress-bar-pink-85 {
+  width: 85%;
+  background-color: #ef476f;
+  animation: progressAnimation 6s;
+}
+
+
+.progress-moved .progress-bar-green-65 {
+  width: 65%;
+  background-color: #2bc4af;
+  animation: progressAnimation 6s;
+}
+
+
+.progress-moved .progress-bar-purple-80 {
+  width: 80%;
+  background-color: #80078b;
+  animation: progressAnimation 6s;
+}
+
+.progress-moved .progress-bar-red-70 {
+  width: 70%;
+  background-color: #e63e3e;
+  animation: progressAnimation 6s;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 5%;
+    background-color: #f9bcca;
+  }
+  40% {
+    width: 85%;
+    background-color:#ef476f;
+  }
+  80% {
+    width: 80%;
+    background-color:#80078b;
+  }
+  70% {
+    width: 80%;
+    background-color:#e63e3e;;
+  }
+  100% {
+    width: 85%;
+    background-color: #ef476f;
+  }
+  
+}
