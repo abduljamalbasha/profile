@@ -17,7 +17,7 @@ const routesArr = [
     exact: true,
   },
   {
-    path: '/my-profile',
+    path: '/myprofile',
     component: HomeComponent
   },
   {
